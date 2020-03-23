@@ -1,5 +1,6 @@
 package com.example.atmconsultoria;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Menu;
@@ -30,8 +31,7 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                enviarEmail();
             }
         });
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_principal, R.id.nav_servicos, R.id.nav_clientes)
+                R.id.nav_principal, R.id.nav_servicos, R.id.nav_clientes, R.id.nav_contato, R.id.nav_sobre)
                 .setDrawerLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
@@ -48,16 +48,20 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
-        return true;
-    }
-
-    @Override
     public boolean onSupportNavigateUp() {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
+    }
+
+    public void enviarEmail(){
+
+        Intent email = new Intent( Intent.ACTION_SEND );
+        email.putExtra( Intent.EXTRA_EMAIL, new String[]{"atmconsultoria@gmail.com"});
+        email.putExtra(Intent.EXTRA_SUBJECT,"Contato pelo app");
+        email.putExtra( Intent.EXTRA_TEXT, "Mensagem Automática");
+
+        email.setType("message/rfc822");
+        startActivity( Intent.createChooser( email, "Escolha o App para envio do e-mail"));
     }
 }
