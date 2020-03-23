@@ -3,13 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_home">
+    app:startDestination="@+id/nav_principal">
 
     <fragment
-        android:id="@+id/nav_home"
-        android:name="com.example.atmconsultoria.ui.home.HomeFragment"
+        android:id="@+id/nav_principal"
+        android:name="com.example.atmconsultoria.ui.principal.PrincipalFragment"
         android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home">
+        tools:layout="@layout/fragment_principal">
 
         <action
             android:id="@+id/action_HomeFragment_to_HomeSecondFragment"
@@ -17,12 +17,12 @@
     </fragment>
     <fragment
         android:id="@+id/nav_home_second"
-        android:name="com.example.atmconsultoria.ui.home.HomeSecondFragment"
+        android:name="com.example.atmconsultoria.ui.principal.HomeSecondFragment"
         android:label="@string/home_second"
-        tools:layout="@layout/fragment_home_second">
+        tools:layout="@layout/fragment_principal_second">
         <action
             android:id="@+id/action_HomeSecondFragment_to_HomeFragment"
-            app:destination="@id/nav_home" />
+            app:destination="@id/nav_principal" />
 
         <argument
             android:name="myArg"
