@@ -3,10 +3,8 @@ package com.example.atmconsultoria;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.view.Menu;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
 import androidx.navigation.NavController;
@@ -39,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_principal, R.id.nav_servicos, R.id.nav_clientes, R.id.nav_contato, R.id.nav_sobre)
+                R.id.nav_principal, R.id.nav_servicos, R.id.nav_clientes, R.id.nav_sobre)
                 .setDrawerLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
@@ -62,6 +60,6 @@ public class MainActivity extends AppCompatActivity {
         email.putExtra( Intent.EXTRA_TEXT, "Mensagem Automática");
 
         email.setType("message/rfc822");
-        startActivity( Intent.createChooser( email, "Escolha o App para envio do e-mail"));
+        startActivity( Intent.createChooser( email, "Escolha o App"));
     }
 }

@@ -16,21 +16,10 @@
             android:id="@+id/nav_clientes"
             android:icon="@drawable/ic_clientes_24dp"
             android:title="Clientes" />
+        <item
+            android:id="@+id/nav_sobre"
+            android:icon="@drawable/ic_sobre_24dp"
+            android:title="Sobre"
+            />
     </group>
-
-    <item android:title="Comunicação">
-        <menu>
-            <item
-                android:id="@+id/nav_contato"
-                android:icon="@drawable/ic_contato_24dp"
-                android:title="Contato"
-                />
-            <item
-                android:id="@+id/nav_sobre"
-                android:icon="@drawable/ic_sobre_24dp"
-                android:title="Sobre"
-                />
-        </menu>
-    </item>
-
 </menu>

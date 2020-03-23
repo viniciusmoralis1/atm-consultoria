@@ -9,19 +9,31 @@
         android:id="@+id/nav_principal"
         android:name="com.example.atmconsultoria.ui.principal.PrincipalFragment"
         android:label="@string/menu_home"
-        tools:layout="@layout/fragment_principal" />
+        tools:layout="@layout/fragment_principal" >
+        <action
+            android:id="@+id/action_nav_principal_to_nav_servicos"
+            app:destination="@id/nav_servicos" />
+    </fragment>
 
     <fragment
         android:id="@+id/nav_servicos"
         android:name="com.example.atmconsultoria.ui.servicos.ServicosFragment"
         android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_servicos" />
+        tools:layout="@layout/fragment_servicos" >
+        <action
+            android:id="@+id/action_nav_servicos_to_nav_clientes"
+            app:destination="@id/nav_clientes" />
+    </fragment>
 
     <fragment
         android:id="@+id/nav_clientes"
         android:name="com.example.atmconsultoria.ui.clientes.ClientesFragment"
         android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_clientes" />
+        tools:layout="@layout/fragment_clientes" >
+        <action
+            android:id="@+id/action_nav_clientes_to_nav_sobre"
+            app:destination="@id/nav_sobre" />
+    </fragment>
 
     <fragment
         android:id="@+id/nav_sobre"
