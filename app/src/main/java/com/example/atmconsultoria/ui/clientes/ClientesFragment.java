@@ -1,4 +1,4 @@
-package com.example.atmconsultoria.ui.principal;
+package com.example.atmconsultoria.ui.clientes;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,12 +10,12 @@ import androidx.fragment.app.Fragment;
 
 import com.example.atmconsultoria.R;
 
-public class PrincipalFragment extends Fragment {
+public class ClientesFragment extends Fragment {
 
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        View root = inflater.inflate(R.layout.fragment_principal, container, false);
+        View root = inflater.inflate(R.layout.fragment_slideshow, container, false);
         return root;
     }
 }

@@ -8,8 +8,8 @@
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="353dp"
-        android:layout_height="205dp"
+        android:layout_width="346dp"
+        android:layout_height="128dp"
         android:contentDescription="ATM Consultoria Logo"
         android:src="@drawable/logo"
         app:layout_constraintBottom_toBottomOf="parent"
