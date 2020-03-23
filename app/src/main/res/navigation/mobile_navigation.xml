@@ -15,11 +15,11 @@
         android:id="@+id/nav_servicos"
         android:name="com.example.atmconsultoria.ui.servicos.ServicosFragment"
         android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
+        tools:layout="@layout/fragment_servicos" />
 
     <fragment
         android:id="@+id/nav_clientes"
         android:name="com.example.atmconsultoria.ui.clientes.ClientesFragment"
         android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        tools:layout="@layout/fragment_clientes" />
 </navigation>
